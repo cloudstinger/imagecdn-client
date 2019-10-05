@@ -44,10 +44,9 @@ class Client{
             'multipart' => [
                 'name' => 'image',
                 'contents' => $image_file_content,
-
             ]
         ]);
-        return $response->getBody();
+        return $response->getBody()->getContents();
     }
 
     public function removeImage($id) {
